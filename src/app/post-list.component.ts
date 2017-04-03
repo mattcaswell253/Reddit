@@ -10,7 +10,8 @@ import { Post } from './post.model';
     </div>
   </ul>
   <div *ngIf="selectedPostName">
-    <h3>Current Details: {{selectedPostName.details}}</h3>
+    <a href = "{{selectedPostName.details}}">Read more</a>
+    <br>
     <img src = "{{selectedPostName.image}}">
     <br>
     <br>
