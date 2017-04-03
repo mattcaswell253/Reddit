@@ -5,11 +5,32 @@ import { Post } from './post.model';
   selector: 'post-list',
   template: `
   <ul>
-    <li *ngFor="let currentPost of childPostList">{{currentPost.name}}</li>
+    <div *ngFor="let currentPost of childPostList">
+    <h4 (click)="showPost(currentPost)">{{currentPost.name}}</h4>
+    </div>
   </ul>
+  <div *ngIf="selectedPostName">
+    <h3>Current Details: {{selectedPostName.details}}</h3>
+    <img src = "{{selectedPostName.image}}">
+    <br>
+    <br>
+    <button (click)="finishedViewing()">Done</button>
+  </div>
   `
 })
 
 export class PostListComponent {
   @Input() childPostList: Post[];
+  selectedPost: Post = null;
+  selectedPostName: Post = null;
+
+
+  showPost(clickedPost) {
+  this.selectedPostName = clickedPost;
+  }
+
+  finishedViewing() {
+  this.selectedPostName = null;
+}
+
 }
