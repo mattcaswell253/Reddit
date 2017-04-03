@@ -11,6 +11,7 @@ import { NewsComponent } from './news/news.component';
 import { SportsComponent } from './sports/sports.component';
 import { AnimalsComponent } from './animals/animals.component';
 import { PostListComponent }  from './post-list.component';
+import { NewPostComponent } from './new-post/new-post.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PostListComponent }  from './post-list.component';
     NewsComponent,
     SportsComponent,
     AnimalsComponent,
-    PostListComponent
+    PostListComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,

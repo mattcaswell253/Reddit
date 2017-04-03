@@ -13,4 +13,5 @@ import { POSTS } from './../mock-posts';
 export class WelcomeComponent {
   masterPostList = POSTS;
 
+
 }

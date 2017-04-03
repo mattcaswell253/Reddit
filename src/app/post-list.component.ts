@@ -17,6 +17,7 @@ import { Post } from './post.model';
     <br>
     <button (click)="finishedViewing()">Done</button>
   </div>
+  <new-post (newPostSender)="addPost($event)"></new-post>
   `
 })
 
@@ -32,6 +33,10 @@ export class PostListComponent {
 
   finishedViewing() {
   this.selectedPostName = null;
+}
+
+addPost(newPostFromChild: Post) {
+  this.childPostList.push(newPostFromChild);
 }
 
 }
