@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
 import { SportsComponent } from './sports/sports.component';
 import { AnimalsComponent } from './animals/animals.component';
+import { PostListComponent }  from './post-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AnimalsComponent } from './animals/animals.component';
     AboutComponent,
     NewsComponent,
     SportsComponent,
-    AnimalsComponent
+    AnimalsComponent,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
